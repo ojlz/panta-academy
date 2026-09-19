@@ -159,31 +159,6 @@ gsap.utils.toArray('main .reveal').forEach((el) => {
   });
 });
 
-/* ---------- Alternador de planos ---------- */
-const PLANS = {
-  mensal: { tag: 'Mensal', price: 'R$ 119', per: '/mês', extra: 'Sem taxa de matrícula*', cta: 'Assinar mensal', wa: 'https://wa.me/5500090000005?text=Quero%20o%20plano%20MENSAL' },
-  anual: { tag: 'Anual', price: 'R$ 420', per: '/ano', extra: 'Sai menos de R$ 40 por mês', cta: 'Assinar anual', wa: 'https://wa.me/5500090000005?text=Quero%20o%20plano%20ANUAL' }
-};
-const planTag = document.getElementById('planTag');
-const planPrice = document.getElementById('planPrice');
-const planPer = document.getElementById('planPer');
-const planExtra = document.getElementById('planExtra');
-const planCta = document.getElementById('planCta');
-document.querySelectorAll('.bt-opt').forEach((btn) => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('.bt-opt').forEach((b) => b.classList.remove('active'));
-    btn.classList.add('active');
-    const d = PLANS[btn.dataset.mode];
-    gsap.fromTo('#planMain', { opacity: 0.4, y: 8 }, { opacity: 1, y: 0, duration: 0.4, ease: 'power2.out' });
-    planTag.textContent = d.tag;
-    planPrice.textContent = d.price;
-    planPer.textContent = d.per;
-    planExtra.textContent = d.extra;
-    planCta.querySelector('span').textContent = d.cta;
-    planCta.href = d.wa;
-  });
-});
-
 /* ---------- FAQ sanfona com easing ---------- */
 document.querySelectorAll('.faq-item').forEach((item) => {
   const btn = item.querySelector('.faq-q');
