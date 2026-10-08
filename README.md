@@ -5,7 +5,7 @@
 > `(00) 90000-0005`, WhatsApp, preços e mapas são inventados.
 > Nenhum dado é real e não representa nenhuma empresa.
 
-🌐 **Demo no ar:** https://brasa-pxzys-projects.vercel.app
+🌐 **Demo no ar:** https://brasa-ex.vercel.app
 
 Landing page de uma academia de musculação fictícia com visual imersivo:
 hero com halter 3D (Three.js), modalidades, planos, FAQ e aula experimental
